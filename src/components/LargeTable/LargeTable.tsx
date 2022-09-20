@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LargeTable() {
+export  function LargeTable() {
   return (
     <div>LargeTable</div>
   )

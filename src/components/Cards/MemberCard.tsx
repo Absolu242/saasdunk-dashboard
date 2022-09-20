@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MemberCard() {
+export  function MemberCard() {
   return (
     <div>MemberCard</div>
   )

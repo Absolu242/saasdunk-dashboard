@@ -1,1 +1,1 @@
-export * from './LargeTable‘
+export * from './LargeTable'

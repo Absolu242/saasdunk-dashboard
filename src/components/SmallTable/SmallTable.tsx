@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SmallTable() {
+export  function SmallTable() {
   return (
     <div>SmallTable</div>
   )

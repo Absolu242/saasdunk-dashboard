@@ -2,7 +2,7 @@ import HomePage from "../pages/Home";
 
 export const routes = [
   {
-    title: "dashboard",
+    title: "Home",
     url: "/",
     icon: "",
     component: HomePage,

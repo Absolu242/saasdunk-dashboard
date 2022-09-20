@@ -1,5 +1,7 @@
-import React from "react";
+import { HomePageView } from "../../components/_View/HomeView";
 
 export default function HomePage() {
-  return <div>Home</div>;
+  return <div>
+    <HomePageView/>
+  </div>;
 }
