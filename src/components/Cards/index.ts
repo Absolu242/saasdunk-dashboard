@@ -1,1 +1,1 @@
-export * from './MemberCard'
+export * from './UserCard'

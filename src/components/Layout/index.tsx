@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
 import { colors } from "../../styles/colors";
 import { Sidebar } from "../Sidebar";
@@ -11,14 +11,18 @@ type MainLayoutProps = {
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
-      <Container >
-       <Flex>
-       <Sidebar />
-        <Box bg={colors.bg}>
-          <TopBar />
-          <Box>{children}</Box>
-        </Box>
-       </Flex>
+      <Container maxWidth={'100%'} padding='0'>
+        <Grid gridTemplateColumns={"234px 1fr"}>
+          <GridItem>
+            <Sidebar />
+          </GridItem>
+          <GridItem>
+            <Box bg={colors.bg} height='100%'>
+              <TopBar />
+              <Box padding={"3rem 2rem"}>{children}</Box>
+            </Box>
+          </GridItem>
+        </Grid>
       </Container>
     </>
   );

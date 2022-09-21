@@ -1,4 +1,6 @@
 import HomePage from "../pages/Home";
+import InvoicePage from "../pages/Invoice";
+import UsersPage from "../pages/Users";
 
 export const routes = [
   {
@@ -8,14 +10,14 @@ export const routes = [
     component: HomePage,
   },
   {
-    title: "page2",
-    url: "/page2",
+    title: "Users",
+    url: "/users",
     icon: "",
-    component: "",
+    component: UsersPage,
   },
   {
-    title: "page3",
-    url: "/page3",
+    title: "Board",
+    url: "/board",
     icon: "",
     component: "",
   },
@@ -24,5 +26,11 @@ export const routes = [
     url: "/page4",
     icon: "",
     component: "",
+  },
+  {
+    title: "Invoice",
+    url: "/invoice",
+    icon: "",
+    component: InvoicePage,
   },
 ];
