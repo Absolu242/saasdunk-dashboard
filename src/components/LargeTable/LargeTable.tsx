@@ -1,13 +1,11 @@
 import {
   TableContainer,
   Table,
-  TableCaption,
   Thead,
   Tr,
   Th,
   Tbody,
   Td,
-  Tfoot,
   Avatar,
   Tag,
   Box,
@@ -19,7 +17,6 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import React from "react";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { invoicesList } from "../../constants/invoices";
 import { colors } from "../../styles/colors";

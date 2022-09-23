@@ -4,7 +4,6 @@ import {
   Flex,
   FormControl,
   FormLabel,
-  Grid,
   Input,
   InputGroup,
   InputLeftElement,
@@ -22,20 +21,13 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { TiThListOutline } from "react-icons/ti";
-import { BsGrid } from "react-icons/bs";
+import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { colors } from "../../../styles/colors";
-import { usersList } from "../../../constants/users";
-import { UserCard } from "../../Cards";
-import { UserRow } from "../../Rows";
 import { FiSearch } from "react-icons/fi";
-import { invoicesList } from "../../../constants/invoices";
 import { LargeTable } from "../../LargeTable";
 
 export function InvoiceView() {
-  const [layout, setLayout] = useState("grid");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -54,6 +46,7 @@ export function InvoiceView() {
             display: "flex",
             alignItems: "center",
           }}
+          color={colors.text.main}
         >
           Invoices{" "}
           <Tag

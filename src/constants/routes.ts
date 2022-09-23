@@ -1,3 +1,4 @@
+import BoardPage from "../pages/Board";
 import HomePage from "../pages/Home";
 import InvoicePage from "../pages/Invoice";
 import SettingsPage from "../pages/Settings";
@@ -20,7 +21,7 @@ export const routes = [
     title: "Board",
     url: "/board",
     icon: "",
-    component: "",
+    component: BoardPage,
   },
   {
     title: "page4",

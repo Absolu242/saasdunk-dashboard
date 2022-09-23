@@ -2,13 +2,8 @@ import {
   Box,
   Flex,
   Icon,
-  Image,
-  List,
-  ListIcon,
-  ListItem,
   Text,
 } from "@chakra-ui/react";
-import { AiFillAppstore } from "react-icons/ai";
 import { TbSettings } from "react-icons/tb";
 import { Link, useLocation } from "react-router-dom";
 import {
