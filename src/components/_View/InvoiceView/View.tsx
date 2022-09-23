@@ -31,6 +31,8 @@ import { usersList } from "../../../constants/users";
 import { UserCard } from "../../Cards";
 import { UserRow } from "../../Rows";
 import { FiSearch } from "react-icons/fi";
+import { invoicesList } from "../../../constants/invoices";
+import { LargeTable } from "../../LargeTable";
 
 export function InvoiceView() {
   const [layout, setLayout] = useState("grid");
@@ -66,30 +68,32 @@ export function InvoiceView() {
         </Text>
 
         <Flex alignItems={"center"}>
-        <Box>
-        <InputGroup
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <InputLeftElement
-            pointerEvents="none"
-            children={<FiSearch color={colors.text.tertiary} size={"1.5rem"} />}
-            h="4.2rem"
-            paddingLeft={"1rem"}
-          />
-          <Input
-            borderRadius={"10px"}
-            width={"28rem"}
-            padding="2rem 3rem"
-            fontSize="1.6rem"
-            type="tel"
-            placeholder="Search..."
-            color={colors.text.tertiary}
-          />
-        </InputGroup>
-      </Box>
+          <Box>
+            <InputGroup
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <InputLeftElement
+                pointerEvents="none"
+                children={
+                  <FiSearch color={colors.text.tertiary} size={"1.5rem"} />
+                }
+                h="4.2rem"
+                paddingLeft={"1rem"}
+              />
+              <Input
+                borderRadius={"10px"}
+                width={"28rem"}
+                padding="2rem 3rem"
+                fontSize="1.6rem"
+                type="tel"
+                placeholder="Search..."
+                color={colors.text.tertiary}
+              />
+            </InputGroup>
+          </Box>
 
           <Button
             borderRadius={"8px"}
@@ -99,7 +103,7 @@ export function InvoiceView() {
             fontSize={"1.6rem"}
             bg={colors.blue2}
             color={colors.white}
-            width="208px"
+            width="264px"
             onClick={onOpen}
           >
             Create New invoice
@@ -107,10 +111,15 @@ export function InvoiceView() {
         </Flex>
       </Flex>
 
-      <Box padding={"3rem 0"}>
-        {usersList.map((user, i) => (
-          <UserRow user={user} key={i} index={i} />
-        ))}
+      <Box
+        style={{
+          borderRadius: "10px",
+        }}
+        marginTop={"3rem"}
+        padding={"3rem 0"}
+        bg={colors.white}
+      >
+        <LargeTable />
       </Box>
 
       <Modal

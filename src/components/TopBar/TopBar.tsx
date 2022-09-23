@@ -93,6 +93,8 @@ export function TopBar() {
                 size={"lg"}
                 name="Firefly"
                 src="https://bit.ly/dan-abramov"
+                width="50px"
+                height="50px"
               />{" "}
               <Text paddingLeft={"1rem"}>Firefly Absolu</Text>
             </Box>

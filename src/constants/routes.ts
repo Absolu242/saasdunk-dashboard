@@ -1,5 +1,6 @@
 import HomePage from "../pages/Home";
 import InvoicePage from "../pages/Invoice";
+import SettingsPage from "../pages/Settings";
 import UsersPage from "../pages/Users";
 
 export const routes = [
@@ -32,5 +33,11 @@ export const routes = [
     url: "/invoice",
     icon: "",
     component: InvoicePage,
+  },
+  {
+    title: "Settings",
+    url: "/settings",
+    icon: "",
+    component: SettingsPage,
   },
 ];

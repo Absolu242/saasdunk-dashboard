@@ -9,6 +9,7 @@ export const colors = {
     green2:"#1FD0A3",
     green3:"#59DDBB",
     green4:"#8DEAD2",
+    green5:"#dbf7f0",
     yellow1:"#F2A626",
     yellow2:"#FFC800",
     yellow3:"#FFD655",
@@ -17,6 +18,7 @@ export const colors = {
     blue2:"#369AFE",
     blue3:"#56AAFF",
     blue4:"#8FC6FE",
+    blue5:"#d6eaff",
     blueberry1:"#4540BB",
     blueberry2:"#6863FB",
     blueberry3:"#9390F3",
@@ -24,6 +26,7 @@ export const colors = {
     white:"#ffffff",
     bg:"#F4F7FC",
     bg2:"#f4faff",
+    bg3:"#fafcfe",
     text:{
         main:'#242F57',
         secondary:"#636E95",

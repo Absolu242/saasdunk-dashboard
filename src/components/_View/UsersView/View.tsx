@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  color,
   Flex,
   FormControl,
   FormLabel,
@@ -130,14 +131,24 @@ export function UsersView() {
         size="554px"
       >
         <ModalOverlay />
-        <ModalContent width="554px" height="677px" padding={"2rem"}>
-          <ModalHeader fontWeight={"700"} fontSize={"2.6rem"}>
+        <ModalContent borderRadius={'10px'} width="554px" height="677px" padding={"3.2rem 0"}>
+          <ModalHeader
+            color={colors.text.main}
+            fontWeight={"700"}
+            fontSize={"2.6rem"}
+            padding="0 3.2rem"
+          >
             Add New
           </ModalHeader>
-          <ModalCloseButton />
-          <ModalBody pb={6}>
-            <Flex alignItems={"center"} paddingBottom="2rem">
-              <FaUserCircle color={colors.blue2} size={"30px"} />
+          <ModalCloseButton
+            fontSize={"1.7rem"}
+            fontWeight="400"
+            color={colors.text.icon}
+            margin="3.8rem 3.2rem"
+          />
+          <ModalBody padding={"3.2rem  3.2rem 0 3.2rem"}>
+            <Flex alignItems={"center"} paddingBottom="3.2rem">
+              <FaUserCircle color={colors.blue2} size={"56px"} />
               <Button variant="none">
                 <Text fontSize={"1.4rem"} color={colors.blue2}>
                   {" "}
@@ -151,6 +162,8 @@ export function UsersView() {
                 fontWeight="700"
                 color={colors.text.tertiary}
                 textTransform="uppercase"
+                paddingBottom={"1.9rem"}
+                margin={"0"}
               >
                 First name
               </FormLabel>
@@ -160,16 +173,17 @@ export function UsersView() {
                 ref={initialRef}
                 placeholder="First name"
                 padding={"2rem 1rem"}
-                margin="1rem 0"
               />
             </FormControl>
 
-            <FormControl mt={4}>
+            <FormControl>
               <FormLabel
                 fontSize={"1.2rem"}
                 fontWeight="700"
                 color={colors.text.tertiary}
                 textTransform="uppercase"
+                padding={"1.9rem 0"}
+                margin={"0"}
               >
                 Last name
               </FormLabel>
@@ -179,16 +193,17 @@ export function UsersView() {
                 ref={initialRef}
                 padding={"2rem 1rem"}
                 placeholder="Last name"
-                margin="1rem 0"
               />
             </FormControl>
 
-            <FormControl mt={4}>
+            <FormControl>
               <FormLabel
                 fontSize={"1.2rem"}
                 fontWeight="700"
                 color={colors.text.tertiary}
                 textTransform="uppercase"
+                padding={"1.9rem 0"}
+                margin={"0"}
               >
                 Email
               </FormLabel>
@@ -198,41 +213,89 @@ export function UsersView() {
                 ref={initialRef}
                 padding={"2rem 1rem"}
                 placeholder="Email Address"
-                margin="1rem 0"
               />
             </FormControl>
 
-            <Box paddingTop={'1rem'}>
+            <Box paddingTop={"2.4rem"}>
               <Text
                 fontSize={"1.2rem"}
                 fontWeight="700"
                 color={colors.text.tertiary}
                 textTransform="uppercase"
-                paddingBottom={'1rem'}
+                paddingBottom={"1rem"}
               >
                 Assign a role
               </Text>
-              <RadioGroup onChange={setUserRole} value={userRole} defaultValue='user'>
-                <Stack spacing={5} direction="row" >
-                  <Radio  size='lg' color={colors.blue2} value="admin">
-                    Admin
+              <RadioGroup
+                onChange={setUserRole}
+                value={userRole}
+                defaultValue="user"
+              >
+                <Stack spacing={5} direction="row">
+                  <Radio value="admin">
+                    <Text
+                      fontSize={"1.6rem"}
+                      fontWeight="500"
+                      color={
+                        userRole === "admin"
+                          ? colors.blue2
+                          : colors.text.secondary
+                      }
+                    >
+                      Admin
+                    </Text>
                   </Radio>
-                  <Radio fontSize={'2rem'} color={colors.blue2} value="super user">
-                    Super User
+                  <Radio value="super user">
+                    <Text
+                      color={
+                        userRole === "super user"
+                          ? colors.blue2
+                          : colors.text.secondary
+                      }
+                      fontSize={"1.6rem"}
+                      fontWeight="500"
+                    >
+                      {" "}
+                      Super User
+                    </Text>
                   </Radio>
-                  <Radio fontSize={'2rem'} color={colors.blue2} value="user">
-                    User
+                  <Radio value="user">
+                    <Text
+                      color={
+                        userRole === "user"
+                          ? colors.blue2
+                          : colors.text.secondary
+                      }
+                      fontSize={"1.6rem"}
+                      fontWeight="500"
+                    >
+                      {" "}
+                      User
+                    </Text>
                   </Radio>
                 </Stack>
               </RadioGroup>
             </Box>
           </ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3}>
-              Save
+          <ModalFooter
+            borderTop={`1px solid ${colors.bg}`}
+            height="12%"
+            textAlign={"center"}
+            justifyContent="center"
+          >
+            <Button
+              borderRadius={"8px"}
+              marginTop="3.2rem"
+              fontWeight={"500"}
+              padding="2rem"
+              fontSize={"1.6rem"}
+              bg={colors.blue2}
+              color={colors.white}
+              width="301px"
+            >
+              Add and Invite Person
             </Button>
-            <Button onClick={onClose}>Cancel</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

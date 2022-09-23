@@ -17,7 +17,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
             <Sidebar />
           </GridItem>
           <GridItem>
-            <Box bg={colors.bg} height='100%'>
+            <Box bg={colors.bg} minHeight='100vh' height={'100%'}>
               <TopBar />
               <Box padding={"3rem 2rem"}>{children}</Box>
             </Box>
