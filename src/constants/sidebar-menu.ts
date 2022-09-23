@@ -1,4 +1,12 @@
 import { AiFillAppstore } from "react-icons/ai";
+import { FiUsers } from "react-icons/fi";
+import { TbFileInvoice, TbLayoutBoard } from "react-icons/tb";
+import {HiOutlineInboxIn} from 'react-icons/hi'
+import { BsChatLeftDots,BsCalendarWeek } from "react-icons/bs";
+import {VscFileSubmodule} from 'react-icons/vsc'
+import {RiPriceTagLine} from 'react-icons/ri'
+import { TiDocument } from "react-icons/ti";
+
 
 export const sidebarMain = {
   title: "MAIN",
@@ -9,12 +17,12 @@ export const sidebarMain = {
       url: "/",
     },
     {
-      icon: AiFillAppstore,
+      icon: FiUsers,
       name: "Users",
       url: "/users",
     },
     {
-        icon: AiFillAppstore,
+        icon: TbLayoutBoard,
         name: "Board",
         url: "/board",
       },
@@ -26,12 +34,12 @@ export const sidebarCom = {
     title: "COMMUNICATIONS",
     items: [
       {
-        icon: AiFillAppstore,
+        icon: HiOutlineInboxIn ,
         name: "Inbox",
         url: "/inbox",
       },
       {
-        icon: AiFillAppstore,
+        icon: BsChatLeftDots,
         name: "Chat",
         url: "/chat",
       },
@@ -43,34 +51,30 @@ export const sidebarCom = {
     title: "Pages",
     items: [
       {
-        icon: AiFillAppstore,
+        icon: VscFileSubmodule,
         name: "File Manager",
         url: "/file-manager",
       },
       {
-        icon: AiFillAppstore,
+        icon: BsCalendarWeek,
         name: "Calendar",
         url: "/calendar",
       },
       {
-        icon: AiFillAppstore,
+        icon: RiPriceTagLine,
         name: "Pricing",
         url: "/pricing",
       },
       {
-        icon: AiFillAppstore,
+        icon: TbFileInvoice,
         name: "Invoice",
         url: "/invoice",
       },
       {
-        icon: AiFillAppstore,
+        icon: TiDocument,
         name: "Documentation",
         url: "/documentation",
       },
-      {
-        icon: AiFillAppstore,
-        name: "Calandar",
-        url: "/chat",
-      },
+   
     ],
   };
