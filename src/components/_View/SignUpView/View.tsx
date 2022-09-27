@@ -14,7 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import { colors } from "../../../styles/colors";
 
-export function SignInView() {
+export function SignUpView() {
   return (
     <Grid w="100%" height={"100vh"} gridTemplateColumns="1fr 1.5fr">
       <Flex
@@ -25,8 +25,9 @@ export function SignInView() {
         width={"100%"}
         height="100%"
         padding={"4rem 0"}
+       
       >
-        <Box marginTop={"10rem"}>
+        <Box  marginTop={"2rem"}>
           <Flex>
             <img src="/logoImg.svg" alt="logo" />
             <Text paddingLeft={".8rem"} color={colors.blue1} fontSize="2.2rem">
@@ -39,9 +40,29 @@ export function SignInView() {
             fontSize={"2.6rem"}
             padding="1rem 0 3.4rem 0"
           >
-            Welcome Back !
+            Create an Account
           </Text>
           <Box>
+            <FormControl>
+              <FormLabel
+                fontSize={"1.2rem"}
+                fontWeight="700"
+                color={colors.text.tertiary}
+                textTransform="uppercase"
+                paddingBottom={"1.9rem"}
+                margin={"0"}
+              >
+                First Name
+              </FormLabel>
+              <Input
+                borderRadius={"10px"}
+                fontSize={"1.6rem"}
+                placeholder="First Name"
+                padding={"2rem 1rem"}
+                type="text"
+              />
+            </FormControl>
+
             <FormControl>
               <FormLabel
                 fontSize={"1.2rem"}
@@ -77,24 +98,33 @@ export function SignInView() {
                 borderRadius={"10px"}
                 fontSize={"1.6rem"}
                 padding={"2rem 1rem"}
-                placeholder="insert your password "
+                placeholder="insert a password "
                 type={"password"}
               />
             </FormControl>
 
-            <Box padding={"2.8rem 0 3.2rem 0 "}>
-              <Radio value="admin">
-                <Text
-                  fontSize={"1.6rem"}
-                  fontWeight="500"
-                  color={colors.text.secondary}
-                >
-                  Remember me
-                </Text>
-              </Radio>
-            </Box>
+            <FormControl>
+              <FormLabel
+                fontSize={"1.2rem"}
+                fontWeight="700"
+                color={colors.text.tertiary}
+                textTransform="uppercase"
+                padding={"1.6rem 0 1.9rem 0"}
+                margin={"0"}
+              >
+                Confirm Password
+              </FormLabel>
+              <Input
+                borderRadius={"10px"}
+                fontSize={"1.6rem"}
+                padding={"2rem 1rem"}
+                placeholder="insert the password again"
+                type={"password"}
+              />
+            </FormControl>
           </Box>
 
+   
           <Button
             borderRadius={"8px"}
             fontWeight={"500"}
@@ -104,15 +134,16 @@ export function SignInView() {
             color={colors.white}
             width="301px"
             textTransform="uppercase"
+            marginTop={'1.9rem '}
           >
-            Sign in
+            Sign up
           </Button>
 
-          <Flex justifyContent={"end"} paddingTop="2.4rem">
+          <Box paddingTop="2.4rem">
             <Text color={colors.blue2} fontSize="1.4rem">
               Forgot Password?
             </Text>
-          </Flex>
+          </Box>
         </Box>
 
         <Box justifySelf={"end"}>
@@ -128,6 +159,8 @@ export function SignInView() {
           </Text>
         </Box>
       </Flex>
+
+
       <Flex
         bg={colors.blue1}
         width={"100%"}
@@ -135,12 +168,12 @@ export function SignInView() {
         alignItems={"center"}
         justifyContent={"center"}
         position="relative"
-        maxHeight={'100vh'}
+        maxHeight={"100vh"}
       >
         <Box>
           <Image margin={"2rem 0rem 0rem 13rem "} src="img.svg" width={"70%"} />
         </Box>
-        <Box position={"absolute"} marginTop='40%'>
+        <Box position={"absolute"} marginTop="40%">
           <Text
             padding={"8.2rem 0 1.2rem 0"}
             fontWeight={"bold"}
@@ -149,7 +182,12 @@ export function SignInView() {
           >
             Connect and manage with your team!
           </Text>
-          <Text textAlign={'center'} maxWidth={"45rem"} color={colors.white} fontSize="1.4rem">
+          <Text
+            textAlign={"center"}
+            maxWidth={"45rem"}
+            color={colors.white}
+            fontSize="1.4rem"
+          >
             Aziest Jordan is one of the biggest superstars to have immerged from
             the professional designer in world.
           </Text>

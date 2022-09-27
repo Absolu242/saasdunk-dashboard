@@ -1,7 +1,8 @@
+import { MainLayout } from "../../components/Layout";
 import { HomePageView } from "../../components/_View/HomeView";
 
 export default function HomePage() {
-  return <div>
+  return <MainLayout>
     <HomePageView/>
-  </div>;
+  </MainLayout>;
 }
