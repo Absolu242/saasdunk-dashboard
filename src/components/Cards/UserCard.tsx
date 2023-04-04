@@ -12,16 +12,19 @@ import {
 
 import React from "react";
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import { colors } from "../../styles/colors";
+import { colors } from "../../theme/colors";
 
 export function UserCard({ user }: any) {
   return (
     <Box
-      height="230px"
+      height={"232px"}
+      maxHeight="23.2rem"
+      width={"100%"}
+      maxWidth={"27rem"}
       bg={colors.white}
       borderRadius="10px"
       _hover={{
-        cursor: 'pointer',
+        cursor: "pointer",
         boxShadow:
           " 0 2px 5px 0 rgba(255, 255, 255, 0.115), 0 2px 10px 0#ffffff21)",
       }}
@@ -54,7 +57,7 @@ export function UserCard({ user }: any) {
           name="Firefly"
           src={user.profilePicture}
         />{" "}
-        <Box padding={"2rem 0"}>
+        <Box padding={"1.8rem 0 2.6rem 0"}>
           <Text fontSize={"1.6rem"} color={colors.text.main}>
             {user.name}
           </Text>
@@ -67,7 +70,8 @@ export function UserCard({ user }: any) {
           borderColor={colors.blue2}
           variant="outline"
           color={colors.blue2}
-          padding={"1.5rem 2rem"}
+          padding={"0 2rem"}
+          height={"3.6rem"}
           borderRadius="8px"
           _hover={{
             color: colors.white,

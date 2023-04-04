@@ -10,7 +10,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { colors } from "../../../styles/colors";
+import { colors } from "../../../theme/colors";
 
 export function SignUpView() {
   return (
@@ -23,12 +23,15 @@ export function SignUpView() {
         width={"100%"}
         height="100%"
         padding={"4rem 0"}
-       
       >
-        <Box  marginTop={"2rem"}>
+        <Box marginTop={"2rem"}>
           <Flex>
             <img src="/logoImg.svg" alt="logo" />
-            <Text paddingLeft={".8rem"} color={colors.blue1} fontSize="2.2rem">
+            <Text
+              paddingLeft={".8rem"}
+              color={colors.blue1}
+              fontSize="2.2rem"
+            >
               <strong>SaaS</strong>dunk.
             </Text>
           </Flex>
@@ -122,7 +125,6 @@ export function SignUpView() {
             </FormControl>
           </Box>
 
-   
           <Button
             borderRadius={"8px"}
             fontWeight={"500"}
@@ -132,7 +134,7 @@ export function SignUpView() {
             color={colors.white}
             width="301px"
             textTransform="uppercase"
-            marginTop={'1.9rem '}
+            marginTop={"1.9rem "}
           >
             Sign up
           </Button>
@@ -158,7 +160,6 @@ export function SignUpView() {
         </Box>
       </Flex>
 
-
       <Flex
         bg={colors.blue1}
         width={"100%"}
@@ -169,7 +170,11 @@ export function SignUpView() {
         maxHeight={"100vh"}
       >
         <Box>
-          <Image margin={"2rem 0rem 0rem 13rem "} src="img.svg" width={"70%"} />
+          <Image
+            margin={"2rem 0rem 0rem 13rem "}
+            src="img.svg"
+            width={"70%"}
+          />
         </Box>
         <Box position={"absolute"} marginTop="40%">
           <Text
@@ -186,8 +191,8 @@ export function SignUpView() {
             color={colors.white}
             fontSize="1.4rem"
           >
-            Aziest Jordan is one of the biggest superstars to have immerged from
-            the professional designer in world.
+            Aziest Jordan is one of the biggest superstars to have
+            immerged from the professional designer in world.
           </Text>
         </Box>
       </Flex>

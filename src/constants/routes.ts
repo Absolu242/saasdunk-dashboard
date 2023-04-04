@@ -1,4 +1,5 @@
 import BoardPage from "../pages/Board";
+import DocumentationPage from "../pages/Documentation";
 import HomePage from "../pages/Home";
 import InvoicePage from "../pages/Invoice";
 import SettingsPage from "../pages/Settings";
@@ -34,6 +35,12 @@ export const routes = [
     url: "/invoice",
     icon: "",
     component: InvoicePage,
+  },
+  {
+    title: "Documentation",
+    url: "/documentation",
+    icon: "",
+    component: DocumentationPage,
   },
   {
     title: "Settings",

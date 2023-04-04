@@ -1,0 +1,29 @@
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.p-1 {
+  font-size: 16px;
+}
+
+.p-2 {
+  font-size: 14px;
+}
+
+.headline {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: 400;
+}

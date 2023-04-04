@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { invoicesList } from "../../constants/invoices";
-import { colors } from "../../styles/colors";
+import { colors } from "../../theme/colors";
 
 export function LargeTable() {
   return (
@@ -72,12 +72,13 @@ export function LargeTable() {
           </Thead>
           <Tbody>
             {invoicesList.map((invoice, i) => (
-              <Tr bg={i % 2 === 0 ? colors.white : colors.bg3}
-              _hover={{
-                backgroundColor: colors.bg2,
-                cursor: 'pointer',
-                borderLeft:` 2px solid ${colors.blue1}`
-              }}
+              <Tr
+                bg={i % 2 === 0 ? colors.white : colors.bg3}
+                _hover={{
+                  backgroundColor: colors.bg2,
+                  cursor: "pointer",
+                  borderLeft: ` 2px solid ${colors.blue1}`,
+                }}
               >
                 <Td>
                   <Flex alignItems={"center"}>
@@ -89,11 +90,17 @@ export function LargeTable() {
                       src={invoice.profilePicture}
                     />
                     <Box lineHeight={"1rem"} paddingLeft="1rem">
-                      <Text color={colors.text.main} fontSize={"1.6rem"}>
+                      <Text
+                        color={colors.text.main}
+                        fontSize={"1.6rem"}
+                      >
                         {invoice.name}v
                       </Text>{" "}
                       <br />{" "}
-                      <Text color={colors.text.tertiary} fontSize={"1.4rem"}>
+                      <Text
+                        color={colors.text.tertiary}
+                        fontSize={"1.4rem"}
+                      >
                         {invoice.email}
                       </Text>
                     </Box>
@@ -125,8 +132,10 @@ export function LargeTable() {
                 <Td fontSize={"1.4rem"}>{invoice.date}</Td>
 
                 <Flex
-                marginTop={'2rem'}
-                justifyContent={"center"} alignItems="flex-end">
+                  marginTop={"2rem"}
+                  justifyContent={"center"}
+                  alignItems="flex-end"
+                >
                   {" "}
                   <Menu>
                     <MenuButton

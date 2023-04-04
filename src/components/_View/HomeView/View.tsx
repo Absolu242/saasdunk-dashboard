@@ -8,8 +8,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { TbArrowWaveRightDown, TbArrowWaveRightUp } from "react-icons/tb";
-import { colors } from "../../../styles/colors";
+import {
+  TbArrowWaveRightDown,
+  TbArrowWaveRightUp,
+} from "react-icons/tb";
+import { colors } from "../../../theme/colors";
 import { LineChart } from "../../Charts";
 import { VerticalBar } from "../../Charts/Verticalbar";
 
@@ -17,11 +20,15 @@ export function HomePageView() {
   return (
     <Box>
       <Box>
-        <Text fontSize={"2.6rem"} fontWeight={"bold"} color={colors.text.main}>
+        <Text
+          fontSize={"2.6rem"}
+          fontWeight={"bold"}
+          color={colors.text.main}
+        >
           Dashboard{" "}
         </Text>
 
-        <Text fontSize={"1.4rem"} color={colors.text.secondary}>
+        <Text fontSize={"1.6rem"} color={colors.text.secondary}>
           See your data visualization from{" "}
           <span
             style={{
@@ -33,7 +40,11 @@ export function HomePageView() {
         </Text>
       </Box>
 
-      <Grid templateColumns="repeat(4, 1fr)" gap={"25px"} margin={"3.7rem 0"}>
+      <Grid
+        templateColumns="repeat(4, 1fr)"
+        gap={"2.5rem"}
+        margin={"3.7rem 0 2.5rem 0"}
+      >
         <GridItem
           borderRadius={"10px"}
           padding={"2.4rem"}
@@ -42,7 +53,11 @@ export function HomePageView() {
           bg={colors.white}
           boxShadow={"0px 2px 4px rgba(28,41,90,0.04)"}
         >
-          <Text color={colors.text.secondary} fontSize={"1.6rem"}>
+          <Text
+            fontFamily={"Inter"}
+            color={colors.text.secondary}
+            fontSize={"1.6rem"}
+          >
             Realtime Users
           </Text>
           <Box>
@@ -56,12 +71,14 @@ export function HomePageView() {
               </Text>
               <Box
                 fontSize={"1.4rem"}
-                experimental_spaceX="1rem"
                 color={colors.green2}
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <Text>+21.01%</Text>{" "}
-                <TbArrowWaveRightUp fontSize={"1.8rem"} color={colors.green2} />
+                <TbArrowWaveRightUp
+                  fontSize={"1.8rem"}
+                  color={colors.green2}
+                />
               </Box>
             </Box>
           </Box>
@@ -88,12 +105,14 @@ export function HomePageView() {
               </Text>
               <Box
                 fontSize={"1.4rem"}
-                experimental_spaceX="1rem"
                 color={colors.green2}
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <Text>+10.01%</Text>{" "}
-                <TbArrowWaveRightUp fontSize={"1.8rem"} color={colors.green2} />
+                <TbArrowWaveRightUp
+                  fontSize={"1.8rem"}
+                  color={colors.green2}
+                />
               </Box>
             </Box>
           </Box>
@@ -122,12 +141,14 @@ export function HomePageView() {
 
               <Box
                 fontSize={"1.4rem"}
-                experimental_spaceX="1rem"
                 color={colors.red2}
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <Text>-12.01%</Text>{" "}
-                <TbArrowWaveRightDown fontSize={"1.8rem"} color={colors.red2} />
+                <TbArrowWaveRightDown
+                  fontSize={"1.8rem"}
+                  color={colors.red2}
+                />
               </Box>
             </Box>
           </Box>
@@ -156,12 +177,14 @@ export function HomePageView() {
               </Text>
               <Box
                 fontSize={"1.4rem"}
-                experimental_spaceX="1rem"
                 color={colors.green2}
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <Text>+21.01%</Text>{" "}
-                <TbArrowWaveRightUp fontSize={"1.8rem"} color={colors.green2} />
+                <TbArrowWaveRightUp
+                  fontSize={"1.8rem"}
+                  color={colors.green2}
+                />
               </Box>
             </Box>
           </Box>
@@ -174,14 +197,18 @@ export function HomePageView() {
           gridTemplateRows={"230px 355px auto "}
           gap={"25px"}
           gridAutoRows="auto"
-          height={'100vh'}
+          height={"100vh"}
         >
           <GridItem
             width={"862px"}
             height="512px"
             boxShadow={"0px 2px 4px rgba(28,41,90,0.04)"}
           >
-            <Box bg={colors.white} padding={"2.4rem"} borderRadius="10px">
+            <Box
+              bg={colors.white}
+              padding={"2.4rem"}
+              borderRadius="10px"
+            >
               <Flex justifyContent={"space-between"}>
                 <Box>
                   <Text
@@ -192,7 +219,10 @@ export function HomePageView() {
                     Marketing{" "}
                   </Text>
 
-                  <Text fontSize={"1.4rem"} color={colors.text.secondary}>
+                  <Text
+                    fontSize={"1.6rem"}
+                    color={colors.text.secondary}
+                  >
                     See your marketing fluctuative
                   </Text>
                 </Box>
@@ -211,13 +241,16 @@ export function HomePageView() {
                   <option value="reach">Reach</option>
                 </Select>
               </Flex>
-              <Flex padding={"2.4rem 0"} experimental_spaceX={"4.4rem"}>
+              <Flex padding={"2.4rem 0 2.4rem 4.4rem"}>
                 <Box>
-                  <Text fontSize={"1.4rem"} color={colors.text.secondary}>
+                  <Text
+                    fontSize={"1.4rem"}
+                    color={colors.text.secondary}
+                  >
                     {" "}
                     New Visitor
                   </Text>
-                  <Flex experimental_spaceX={"1rem"}>
+                  <Flex paddingRight={"3rem"}>
                     <Text
                       fontSize={"2.2rem"}
                       fontWeight={"bold"}
@@ -227,9 +260,12 @@ export function HomePageView() {
                     </Text>
                     <Box
                       fontSize={"1.4rem"}
-                      experimental_spaceX="1rem"
+                      paddingLeft="1rem"
                       color={colors.green2}
-                      style={{ display: "flex", alignItems: "center" }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                      }}
                     >
                       <Text>+21.01%</Text>{" "}
                       <TbArrowWaveRightUp
@@ -241,11 +277,14 @@ export function HomePageView() {
                 </Box>
 
                 <Box>
-                  <Text fontSize={"1.4rem"} color={colors.text.secondary}>
+                  <Text
+                    fontSize={"1.4rem"}
+                    color={colors.text.secondary}
+                  >
                     {" "}
                     New Customer
                   </Text>
-                  <Flex experimental_spaceX={"1rem"}>
+                  <Flex paddingRight={"3rem"}>
                     <Text
                       fontSize={"2.2rem"}
                       fontWeight={"bold"}
@@ -255,9 +294,12 @@ export function HomePageView() {
                     </Text>
                     <Box
                       fontSize={"1.4rem"}
-                      experimental_spaceX="1rem"
+                      paddingLeft="1rem"
                       color={colors.green2}
-                      style={{ display: "flex", alignItems: "center" }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                      }}
                     >
                       <Text>+21.01%</Text>{" "}
                       <TbArrowWaveRightUp
@@ -269,11 +311,14 @@ export function HomePageView() {
                 </Box>
 
                 <Box>
-                  <Text fontSize={"1.4rem"} color={colors.text.secondary}>
+                  <Text
+                    fontSize={"1.4rem"}
+                    color={colors.text.secondary}
+                  >
                     {" "}
                     Reach
                   </Text>
-                  <Flex experimental_spaceX={"1rem"}>
+                  <Flex paddingRight={"3rem"}>
                     <Text
                       fontSize={"2.2rem"}
                       fontWeight={"bold"}
@@ -283,9 +328,12 @@ export function HomePageView() {
                     </Text>
                     <Box
                       fontSize={"1.4rem"}
-                      experimental_spaceX="1rem"
+                      paddingLeft="1rem"
                       color={colors.red2}
-                      style={{ display: "flex", alignItems: "center" }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                      }}
                     >
                       <Text>-8.01%</Text>{" "}
                       <TbArrowWaveRightUp
@@ -311,8 +359,14 @@ export function HomePageView() {
             gridColumn={"2/ span 2"}
             boxShadow={"0px 2px 4px rgba(28,41,90,0.04)"}
           >
-            <Box padding={"2.4rem"} borderBottom={`1px solid ${colors.bg2}`}>
-              <Flex justifyContent={"space-between"} paddingBottom={"2.4rem"}>
+            <Box
+              padding={"2.4rem"}
+              borderBottom={`1px solid ${colors.bg2}`}
+            >
+              <Flex
+                justifyContent={"space-between"}
+                paddingBottom={"2.4rem"}
+              >
                 <Text
                   fontWeight={"bold"}
                   color={colors.text.secondary}
@@ -338,7 +392,10 @@ export function HomePageView() {
             </Box>
             <Flex justifyContent={"space-between"} padding="2.4rem">
               <Box textAlign={"center"}>
-                <Text color={colors.text.tertiary} fontSize="1.6rem">
+                <Text
+                  color={colors.text.tertiary}
+                  fontSize="1.6rem"
+                >
                   Target
                 </Text>
                 <Text
@@ -351,7 +408,10 @@ export function HomePageView() {
               </Box>
 
               <Box textAlign={"center"}>
-                <Text color={colors.text.tertiary} fontSize="1.6rem">
+                <Text
+                  color={colors.text.tertiary}
+                  fontSize="1.6rem"
+                >
                   Last Month
                 </Text>
                 <Text
@@ -373,24 +433,37 @@ export function HomePageView() {
             gridColumn={"2/ span 2"}
             boxShadow={"0px 2px 4px rgba(28,41,90,0.04)"}
           >
-            <Box padding={"2.4rem "} paddingBottom={'0'} borderBottom={`1px solid ${colors.bg2}`}>
-              <Flex justifyContent={"space-between"} paddingBottom={"2.4rem"}>
+            <Box
+              padding={"2.4rem "}
+              paddingBottom={"0"}
+              borderBottom={`1px solid ${colors.bg2}`}
+            >
+              <Flex
+                justifyContent={"space-between"}
+                paddingBottom={"2.4rem"}
+              >
                 <Text
                   fontWeight={"bold"}
                   color={colors.text.secondary}
                   fontSize="2.2rem"
                 >
-                 Members
+                  Members
                 </Text>
-                
               </Flex>
-            <Box >
-              <VerticalBar/>
+              <Box>
+                <VerticalBar />
+              </Box>
             </Box>
-            </Box>
-            <Flex justifyContent={"space-between"} padding="2.4rem" marginTop={'4rem'}>
+            <Flex
+              justifyContent={"space-between"}
+              padding="2.4rem"
+              marginTop={"4rem"}
+            >
               <Box textAlign={"center"}>
-                <Text color={colors.text.tertiary} fontSize="1.6rem">
+                <Text
+                  color={colors.text.tertiary}
+                  fontSize="1.6rem"
+                >
                   Users
                 </Text>
                 <Text
@@ -403,8 +476,11 @@ export function HomePageView() {
               </Box>
 
               <Box textAlign={"center"}>
-                <Text color={colors.text.tertiary} fontSize="1.6rem">
-                VIP
+                <Text
+                  color={colors.text.tertiary}
+                  fontSize="1.6rem"
+                >
+                  VIP
                 </Text>
                 <Text
                   fontWeight={"bold"}

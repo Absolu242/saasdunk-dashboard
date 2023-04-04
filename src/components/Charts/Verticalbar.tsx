@@ -9,7 +9,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { colors } from "../../styles/colors";
+import { colors } from "../../theme/colors";
 
 ChartJS.register(
   CategoryScale,
@@ -33,7 +33,14 @@ export const options = {
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June"];
+const labels = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+];
 
 export const data = {
   labels,

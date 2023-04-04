@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { colors } from "../../styles/colors";
+import { colors } from "../../theme/colors";
 
 ChartJS.register(
   CategoryScale,
@@ -34,11 +34,18 @@ export const options = {
       display: false,
       text: "Chart.js Line Chart",
     },
-   
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+];
 
 export const data = {
   labels,

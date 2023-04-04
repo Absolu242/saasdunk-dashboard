@@ -19,16 +19,17 @@ import {
 import React from "react";
 import { AiFillBell } from "react-icons/ai";
 import { FiChevronDown, FiSearch } from "react-icons/fi";
-import { colors } from "../../styles/colors";
+import { colors } from "../../theme/colors";
 
 export function TopBar() {
   return (
     <Flex
-      padding={"2.3rem"}
+      padding={"2rem 2.5rem 2rem 2.5rem"}
       justifyContent={"space-between"}
       width={"100%"}
       bg="#ffffff"
       alignItems={"center"}
+      maxHeight="8.2rem"
     >
       <Box>
         <InputGroup
@@ -39,7 +40,12 @@ export function TopBar() {
         >
           <InputLeftElement
             pointerEvents="none"
-            children={<FiSearch color={colors.text.tertiary} size={"1.5rem"} />}
+            children={
+              <FiSearch
+                color={colors.text.tertiary}
+                size={"1.6rem"}
+              />
+            }
             h="4.2rem"
             paddingLeft={"1rem"}
           />
@@ -55,20 +61,22 @@ export function TopBar() {
         </InputGroup>
       </Box>
 
-      <Box experimental_spaceX={"2rem"}>
+      <Box padding={"0 2rem"}>
         <Menu>
           <MenuButton
             as={IconButton}
             aria-label="Options"
             icon={<AiFillBell />}
             variant="none"
-            fontSize={"2.5rem"}
             color={colors.text.tertiary}
+            fontSize="2.4rem"
           />
           <MenuList fontSize={"1.6rem"} width="200px">
             <MenuItem icon={<AiFillBell />}>New Tab</MenuItem>
             <MenuItem icon={<AiFillBell />}>New Window</MenuItem>
-            <MenuItem icon={<AiFillBell />}>Open Closed Tab</MenuItem>
+            <MenuItem icon={<AiFillBell />}>
+              Open Closed Tab
+            </MenuItem>
             <MenuItem icon={<AiFillBell />}>Open File...</MenuItem>
           </MenuList>
         </Menu>
@@ -79,7 +87,9 @@ export function TopBar() {
             fontSize={"1.8rem"}
             bg={"transparent"}
             as={Button}
-            rightIcon={<FiChevronDown color={colors.text.tertiary} />}
+            rightIcon={
+              <FiChevronDown color={colors.text.tertiary} />
+            }
             variant="none"
             color={colors.text.main}
           >
@@ -93,10 +103,12 @@ export function TopBar() {
                 size={"lg"}
                 name="Firefly"
                 src="https://bit.ly/dan-abramov"
-                width="50px"
-                height="50px"
+                width="4.2rem"
+                height="4.2rem"
               />{" "}
-              <Text paddingLeft={"1rem"}>Firefly Absolu</Text>
+              <Text fontSize={"1.8rem"} paddingLeft={"1rem"}>
+                Firefly Absolu
+              </Text>
             </Box>
           </MenuButton>
           <MenuList fontSize={"1.5rem"} width="200px">

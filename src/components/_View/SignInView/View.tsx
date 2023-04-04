@@ -11,7 +11,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { colors } from "../../../styles/colors";
+import { colors } from "../../../theme/colors";
 
 export function SignInView() {
   return (
@@ -28,7 +28,11 @@ export function SignInView() {
         <Box marginTop={"10rem"}>
           <Flex>
             <img src="/logoImg.svg" alt="logo" />
-            <Text paddingLeft={".8rem"} color={colors.blue1} fontSize="2.2rem">
+            <Text
+              paddingLeft={".8rem"}
+              color={colors.blue1}
+              fontSize="2.2rem"
+            >
               <strong>SaaS</strong>dunk.
             </Text>
           </Flex>
@@ -134,12 +138,16 @@ export function SignInView() {
         alignItems={"center"}
         justifyContent={"center"}
         position="relative"
-        maxHeight={'100vh'}
+        maxHeight={"100vh"}
       >
         <Box>
-          <Image margin={"2rem 0rem 0rem 13rem "} src="img.svg" width={"70%"} />
+          <Image
+            margin={"2rem 0rem 0rem 13rem "}
+            src="img.svg"
+            width={"70%"}
+          />
         </Box>
-        <Box position={"absolute"} marginTop='40%'>
+        <Box position={"absolute"} marginTop="40%">
           <Text
             padding={"8.2rem 0 1.2rem 0"}
             fontWeight={"bold"}
@@ -148,9 +156,14 @@ export function SignInView() {
           >
             Connect and manage with your team!
           </Text>
-          <Text textAlign={'center'} maxWidth={"45rem"} color={colors.white} fontSize="1.4rem">
-            Aziest Jordan is one of the biggest superstars to have immerged from
-            the professional designer in world.
+          <Text
+            textAlign={"center"}
+            maxWidth={"45rem"}
+            color={colors.white}
+            fontSize="1.4rem"
+          >
+            Aziest Jordan is one of the biggest superstars to have
+            immerged from the professional designer in world.
           </Text>
         </Box>
       </Flex>

@@ -23,12 +23,11 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
-import { colors } from "../../../styles/colors";
+import { colors } from "../../../theme/colors";
 import { FiSearch } from "react-icons/fi";
 import { LargeTable } from "../../LargeTable";
 
 export function InvoiceView() {
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
@@ -71,7 +70,10 @@ export function InvoiceView() {
               <InputLeftElement
                 pointerEvents="none"
                 children={
-                  <FiSearch color={colors.text.tertiary} size={"1.5rem"} />
+                  <FiSearch
+                    color={colors.text.tertiary}
+                    size={"1.5rem"}
+                  />
                 }
                 h="4.2rem"
                 paddingLeft={"1rem"}
@@ -211,7 +213,11 @@ export function InvoiceView() {
                 defaultValue="user"
               >
                 <Stack spacing={5} direction="row">
-                  <Radio size="lg" color={colors.blue2} value="admin">
+                  <Radio
+                    size="lg"
+                    color={colors.blue2}
+                    value="admin"
+                  >
                     Admin
                   </Radio>
                   <Radio
@@ -221,7 +227,11 @@ export function InvoiceView() {
                   >
                     Super User
                   </Radio>
-                  <Radio fontSize={"2rem"} color={colors.blue2} value="user">
+                  <Radio
+                    fontSize={"2rem"}
+                    color={colors.blue2}
+                    value="user"
+                  >
                     User
                   </Radio>
                 </Stack>

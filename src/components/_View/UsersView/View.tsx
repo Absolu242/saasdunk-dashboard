@@ -24,7 +24,7 @@ import React, { useState } from "react";
 import { TiThListOutline } from "react-icons/ti";
 import { BsGrid } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
-import { colors } from "../../../styles/colors";
+import { colors } from "../../../theme/colors";
 import { usersList } from "../../../constants/users";
 import { UserCard } from "../../Cards";
 import { UserRow } from "../../Rows";
@@ -71,7 +71,11 @@ export function UsersView() {
             >
               <BsGrid
                 fontSize={"1.6rem"}
-                color={layout === "grid" ? colors.blue2 : colors.text.secondary}
+                color={
+                  layout === "grid"
+                    ? colors.blue2
+                    : colors.text.secondary
+                }
               />
             </Button>
             <Button
@@ -81,7 +85,11 @@ export function UsersView() {
             >
               <TiThListOutline
                 fontSize={"1.6rem"}
-                color={layout === "list" ? colors.blue2 : colors.text.secondary}
+                color={
+                  layout === "list"
+                    ? colors.blue2
+                    : colors.text.secondary
+                }
               />
             </Button>
           </Box>
@@ -105,8 +113,8 @@ export function UsersView() {
       {layout === "grid" && (
         <Grid
           gridTemplateColumns={"1fr 1fr 1fr 1fr"}
-          gridGap="2rem"
-          padding={"3rem 0"}
+          gridGap="2.5rem"
+          padding={"3.2rem 0"}
         >
           {usersList.map((user, i) => (
             <UserCard user={user} key={i} />
@@ -115,7 +123,7 @@ export function UsersView() {
       )}
 
       {layout === "list" && (
-        <Box padding={"3rem 0"}>
+        <Box padding={"3.2rem 0"}>
           {usersList.map((user, i) => (
             <UserRow user={user} key={i} index={i} />
           ))}
@@ -130,7 +138,12 @@ export function UsersView() {
         size="554px"
       >
         <ModalOverlay />
-        <ModalContent borderRadius={'10px'} width="554px" height="677px" padding={"3.2rem 0"}>
+        <ModalContent
+          borderRadius={"10px"}
+          width="554px"
+          height="677px"
+          padding={"3.2rem 0"}
+        >
           <ModalHeader
             color={colors.text.main}
             fontWeight={"700"}

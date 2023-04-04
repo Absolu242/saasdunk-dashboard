@@ -12,7 +12,7 @@ import {
 
 import React from "react";
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import { colors } from "../../styles/colors";
+import { colors } from "../../theme/colors";
 
 export function UserRow({ user, index }: any) {
   return (
@@ -26,7 +26,7 @@ export function UserRow({ user, index }: any) {
       borderTopLeftRadius={index === 0 ? "10px" : "0px"}
       borderTopRightRadius={index === 0 ? "10px" : "0px"}
       style={{
-        borderBottom:`1px solid ${colors.bg2}`
+        borderBottom: `1px solid ${colors.bg2}`,
       }}
     >
       <Flex alignItems={"center"}>
