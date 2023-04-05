@@ -25,7 +25,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
-import { KanbanList } from "../../KanbanList";
+import { KanbanList } from "../../Kanban";
 import { Cards } from "../../../types";
 import { colors } from "../../../theme";
 import { BsPlusCircle } from "react-icons/bs";

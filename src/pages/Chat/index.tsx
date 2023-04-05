@@ -1,11 +1,11 @@
 import React from "react";
 import { MainLayout } from "../../components/Layout";
-import BoardView from "../../components/_view/BoardView/View";
+import { ChatView } from "../../components/_view/ChatView";
 
-export default function BoardPage() {
+export default function ChatPage({ socket }: any) {
   return (
     <MainLayout>
-      <BoardView />
+      <ChatView />
     </MainLayout>
   );
 }

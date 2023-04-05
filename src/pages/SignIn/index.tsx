@@ -1,4 +1,4 @@
-import { SignInView } from "../../components/_View/SignInView";
+import { SignInView } from "../../components/_view/SignInView";
 
 export default function SignInPage() {
   console.log("cool");

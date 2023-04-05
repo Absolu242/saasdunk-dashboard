@@ -1,4 +1,5 @@
 import BoardPage from "../pages/Board";
+import ChatPage from "../pages/Chat";
 import DocumentationPage from "../pages/Documentation";
 import HomePage from "../pages/Home";
 import InvoicePage from "../pages/Invoice";
@@ -23,6 +24,12 @@ export const routes = [
     url: "/board",
     icon: "",
     component: BoardPage,
+  },
+  {
+    title: "Chat",
+    url: "/chat",
+    icon: "",
+    component: ChatPage,
   },
   {
     title: "page4",

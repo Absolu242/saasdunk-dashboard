@@ -1,0 +1,58 @@
+:root {
+  --send-bg: #56AAFF;
+  --send-color: white;
+  --receive-bg: #eff2f7;
+  --receive-text: black;
+  --page-background: #f4faff;
+}
+
+.text-chat {
+  max-width: 465px;
+  word-wrap: break-word;
+  margin-bottom: 5px;
+  line-height: 24px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.text-chat:before, .text-chat:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+}
+
+.send {
+  color: var(--send-color);
+  background: var(--send-bg);
+}
+.send:before {
+  right: -7px;
+  width: 20px;
+  background-color: var(--send-bg);
+  border-bottom-left-radius: 16px 14px;
+}
+.send:after {
+  right: -26px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-left-radius: 10px;
+}
+
+.receive {
+  background: var(--receive-bg);
+  color: black;
+}
+.receive:before {
+  left: -7px;
+  width: 20px;
+  background-color: var(--receive-bg);
+  border-bottom-right-radius: 16px 14px;
+}
+.receive:after {
+  left: -26px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-right-radius: 10px;
+}/*# sourceMappingURL=custom-styles.css.map */

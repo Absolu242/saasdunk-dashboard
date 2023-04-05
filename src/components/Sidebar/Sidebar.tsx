@@ -40,7 +40,7 @@ export function Sidebar() {
         }}
       >
         <Text color={colors.blue1} fontSize="2.2rem">
-          <strong>SaaS</strong>dunk.
+          <strong>abso</strong>Saas.
           {/*  <Logo /> */}
         </Text>
       </Box>

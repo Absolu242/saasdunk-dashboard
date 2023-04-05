@@ -10,7 +10,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
 import { colors } from "../../theme";
 import { Cards } from "../../types";
-import { KanbanCard } from "../Cards";
+import { KanbanCard } from "./KanbanCard";
 
 interface KanbanListProps {
   title: string;

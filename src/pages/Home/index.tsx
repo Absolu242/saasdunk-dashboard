@@ -1,8 +1,10 @@
 import { MainLayout } from "../../components/Layout";
-import { HomePageView } from "../../components/_View/HomeView";
+import { HomePageView } from "../../components/_view/HomeView";
 
 export default function HomePage() {
-  return <MainLayout>
-    <HomePageView/>
-  </MainLayout>;
+  return (
+    <MainLayout>
+      <HomePageView />
+    </MainLayout>
+  );
 }
